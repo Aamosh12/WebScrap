@@ -17,7 +17,7 @@ class WebScraper:
         self.options.add_argument("window-size=1920,1080")
         self.driver = webdriver.Chrome(options=self.options)
         self.wait = WebDriverWait(self.driver, 10)
-        self.client = MongoClient("mongodb+srv://aamoshmaharjan234:QOpFnRrwRCaJjzBd@cluster0.1cjd14y.mongodb.net/")  # Update with your MongoDB connection string
+        self.client = MongoClient("Your MongoDB Connection String")  # Update with your MongoDB connection string
         self.db = self.client["webScrap"] # Update with your MongoDB database name
 
     def connect_to_mongo(self):
@@ -89,5 +89,5 @@ class WebScraper:
 
 if __name__ == "__main__":
     scraper = WebScraper()
-    url = 'https://www.nrb.org.np/bank-list/'
+    url = 'Enter the URL'
     scraper.scrape_data(url)
